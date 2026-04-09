@@ -1,34 +1,84 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Aesthetics Boutique - App Styles */
+
+/* Hero overlay for bridal CTA section */
+.hero-overlay {
+    background: linear-gradient(135deg, rgba(128, 0, 32, 0.85) 0%, rgba(92, 0, 23, 0.9) 100%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Section fade-up on scroll */
+.section-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+.section-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
-.App-link {
-    color: #61dafb;
+/* Gallery hover zoom */
+.gallery-item img {
+    transition: transform 0.4s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Service card hover */
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Star rating */
+.star-gold {
+    color: #D4AF37;
+}
+
+/* Navbar scroll shadow */
+.navbar-scrolled {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Floating WhatsApp pulse */
+@keyframes pulse-green {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+    50% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+}
+
+.whatsapp-pulse {
+    animation: pulse-green 2s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #FDFBF7;
+}
+::-webkit-scrollbar-thumb {
+    background: #D4AF37;
+    border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #800020;
+}
+
+/* Page transition */
+.page-enter {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+.page-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
