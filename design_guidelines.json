@@ -1,0 +1,106 @@
+{
+  "theme": "light",
+  "archetype": "5 (Jewel & Luxury) - Light Mode Variant",
+  "design_philosophy": "A high-end, elegant Indian boutique experience. Emphasizes warm ivory backgrounds, rich maroon accents for bridal context, and generous editorial spacing to feel like a premium fashion magazine.",
+  "colors": {
+    "background": "#FDFBF7",
+    "surface": "#FFFFFF",
+    "primary": "#800020",
+    "primary_hover": "#5C0017",
+    "secondary": "#D4AF37",
+    "text_primary": "#1C1917",
+    "text_secondary": "#57534E",
+    "border": "#E7E5E4"
+  },
+  "typography": {
+    "heading_font": "Cormorant Garamond",
+    "body_font": "Outfit",
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight font-light",
+      "h2": "text-3xl sm:text-4xl tracking-tight font-medium",
+      "h3": "text-2xl font-medium",
+      "body": "text-base leading-relaxed text-stone-600",
+      "overline": "text-xs uppercase tracking-[0.2em] font-medium text-stone-500"
+    }
+  },
+  "spacing_and_layout": {
+    "section_padding": "py-20 md:py-32",
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "grid_strategy": "MODE A: The Tetris Grid for gallery and services to create editorial asymmetry. Use gap-8 to gap-12."
+  },
+  "surface_strategies": {
+    "header": "Crystal Glass: bg-white/70 backdrop-blur-xl border-b border-stone-200/50",
+    "cards": "Flat background with 1px subtle border (border-stone-200), no heavy shadow. Hover state adds -translate-y-1 and shadow-lg.",
+    "buttons": "Solid primary color (Maroon) for main CTAs. Ghost or outlined with primary text for secondary."
+  },
+  "motion_and_interactions": {
+    "hover_states": "Buttons and links must explicitly shift color. Cards gently float.",
+    "scroll_effects": "Use subtle fade-up and staggering for service items and gallery images.",
+    "transitions": "transition-all duration-300 ease-in-out"
+  },
+  "components_needed": [
+    "Navbar (Sticky with mobile menu)",
+    "Hero (Editorial split layout with CTA)",
+    "About Section (Brand story with overlapping images)",
+    "Services Showcase (Tailoring, Beauty, Bridal - Bento grid)",
+    "Gallery (Asymmetrical photo grid)",
+    "Testimonials (Card grid with Google/Justdial rating badges)",
+    "Contact & Map (Form + store hours)",
+    "Floating WhatsApp CTA (Fixed bottom right)",
+    "Footer (Large brand text, minimal links)"
+  ],
+  "image_urls": {
+    "hero": [
+      {
+        "url": "https://images.unsplash.com/photo-1654764746225-e63f5e90facd",
+        "category": "hero",
+        "description": "Woman in rich red and gold bridal outfit, serving as the main hero banner visual."
+      }
+    ],
+    "services": [
+      {
+        "url": "https://images.unsplash.com/photo-1629118477133-b8b1499f2b8a",
+        "category": "service_bridal",
+        "description": "Woman in floral ethnic dress, representing designer wear/bridal collections."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1653130029149-9109b115ab9a",
+        "category": "service_beauty",
+        "description": "Woman holding makeup brushes, representing the beauty parlour services."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1771315938116-cd51af9489fc",
+        "category": "service_tailoring",
+        "description": "Antique sewing machine, representing ladies tailoring services."
+      }
+    ],
+    "gallery_and_about": [
+      {
+        "url": "https://images.pexels.com/photos/35844838/pexels-photo-35844838.png",
+        "category": "about_interior",
+        "description": "Stylish boutique interior."
+      },
+      {
+        "url": "https://images.pexels.com/photos/3965551/pexels-photo-3965551.jpeg",
+        "category": "gallery_interior",
+        "description": "Boutique garments on a rack."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1543157145-f78c636d023d",
+        "category": "decorative_floral",
+        "description": "Red petaled flower for decorative accent background."
+      }
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Run 'yarn add @phosphor-icons/react' to install elegant icons suitable for this high-end aesthetic.",
+    "Configure tailwind.config.js to include custom colors (brandMaroon: '#800020', brandGold: '#D4AF37', brandIvory: '#FDFBF7') and the fonts 'Cormorant Garamond' and 'Outfit'.",
+    "Implement bilingual support (Hindi/English) for key marketing text as per user request.",
+    "Do not use dark mode. Ensure all text contrast passes accessibility on the light ivory background.",
+    "Implement a sticky floating WhatsApp button on all pages with the phone number +91 98351 39191.",
+    "The Hero section must use an editorial layout (e.g., text offset on the left, large overlapping bridal image on the right) rather than a generic centered block.",
+    "Ensure the Google rating (4.6) and Justdial rating (4.5) are prominently displayed in a Trust Banner right below the hero section.",
+    "Use pure HTML/Tailwind for layout structure (bento grids, overlapping divs) and Shadcn ONLY for interactive elements like Contact Form, Inputs, etc.",
+    "Include 'data-testid' on all interactive elements (buttons, form inputs, links)."
+  ]
+}
