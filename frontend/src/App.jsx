@@ -20,6 +20,20 @@ function ScrollToTop() {
 }
 
 function App() {
+
+  // 🔥 ADD THIS BLOCK
+  useEffect(() => {
+    const removeBadge = () => {
+      const badge = document.querySelector('[id*="emergent"], [class*="emergent"]');
+      if (badge) badge.remove();
+    };
+
+    removeBadge();
+    const interval = setInterval(removeBadge, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="App font-outfit bg-brandIvory min-h-screen">
       <BrowserRouter>
